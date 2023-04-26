@@ -1,0 +1,12 @@
+@컨트롤러
+스프링 프레임워크는 MVC패턴을 사용하고있고,
+여기서 Controller는 화면(View)과 비즈니스 로직(Model)를 연결시키는 다리 역할을 한다. 
+쉽게 말하자면 화면에서 /aaa 로 가줘~ 하고 요청하면 주소를 받아들여 
+어디로 갈지 분석하고 맞는 길로 연결시켜주는 역할이다. 
+
+JPA(java persistent api)
+자바 ORM(object relational mapping) 기술에 대한 api 표준 명세를 뜻
+{ORM(object relational mapping) : 객체와 관계형 데이터 베이스를 매핑해주는 기술}
+JPA는 라이브러리가 아닌 ORM을 사용하기 위한 인터페이스 모음이다.
+Spring Data JPA를 사용하여 쉽게 스프링에서 제공하는 모듈로 내부적으로 JPA 구현체를 이용
+
