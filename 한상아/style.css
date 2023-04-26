@@ -1,0 +1,79 @@
+@import url('https: //fonts.google.com/');
+
+* {
+    font-family: 'Montserrat';
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-width: fit-content;
+}
+
+.mainbox {
+    width: 610px;
+    padding: 30px;
+    margin: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px soild black;
+    box-shadow: 0 1px 20px 0 reba(0, 0, 0, 0.2);
+}
+
+section {
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    color: #167c24;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #3d3c3c;
+    padding-bottom: 5px;
+}
+
+
+.myphoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    float: left;
+}
+
+.sns {
+    text-align: left;
+    color: darkblue;
+}
+
+.sns-img {
+    width: 30px;
+    height: 30px;
+}
+
+.text {
+    line-height: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 6px;
+}
+
+.subtext {
+    font-size: 13px;
+    color: #3a3a3a;
+    padding-left: 16px;
+    margin-bottom: 8px;
+}
