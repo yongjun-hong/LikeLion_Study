@@ -10,3 +10,9 @@ JPA(java persistent api)
 JPA는 라이브러리가 아닌 ORM을 사용하기 위한 인터페이스 모음이다.
 Spring Data JPA를 사용하여 쉽게 스프링에서 제공하는 모듈로 내부적으로 JPA 구현체를 이용
 
+타임리프
+build gradle 에 아래 것을 추가시켜줌
+implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+html 파일은 resources안에서 작업하면 됨
+<html xmlns:th="http://www.thymeleaf.org"> // html에서 타임리프를 쓰기위한 네임페이스
+ <h1 th:text="${title}">기본 제목</h1> //th:text 속성을 사용하여 변수 출력

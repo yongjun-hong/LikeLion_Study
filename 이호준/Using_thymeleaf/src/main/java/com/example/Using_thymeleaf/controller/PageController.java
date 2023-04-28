@@ -13,6 +13,7 @@ public class PageController {
 
     @GetMapping("/button") // /button 주소 요청이 오면, 실행되는 메소드
     public String button(){
+
         return "button";  //button 이라는 파일을 찾아서 반환해준다.
     }
 
