@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page 1</title>
+    <style>
+        .b1 {
+            background-color: gray;
+            color: white;
+            font-size: 20px;
+
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="text-align: center">
+        <h1 th:text="${title}"></h1>
+        <h1>안녕하세요</h1>
+        <button type="button" class='b1' onclick="location.href='main.html'" ;>main</button>
+    </div>
+</body>
+
+</html>
