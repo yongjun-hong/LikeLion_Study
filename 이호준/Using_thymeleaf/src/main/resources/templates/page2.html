@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- html파일에서 타임리프를 사용한다는 것을 알림.-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Making Start-Up Web Page</title>
+    <meta name="description" content="Step by step study for making web page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>페이지2입니다.</h1>
+    <h2 th:text="${page22}"></h2> <!-- 타임리프로 백서버에서 데이터를 설정한 page22 변수를 가져와 사용.-->
+    <button onclick="location.href='button'">메인페이지</button >
+</body>
+</html>
