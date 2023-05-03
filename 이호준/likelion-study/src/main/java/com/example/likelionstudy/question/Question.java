@@ -1,5 +1,6 @@
-package com.example.likelionstudy;
+package com.example.likelionstudy.question;
 
+import com.example.likelionstudy.answer.Answer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +17,7 @@ public class Question {
     private Integer id;
 
     @Column(length = 200)
+    //엔티티의 속성은 테이블의 컬럼명과 일치한다. 컬럼의 세부 설정을 위해 사용하는 어노테이션.
     private String subject;
 
     @Column(columnDefinition = "TEXT")

@@ -1,6 +1,8 @@
-package com.example.likelionstudy;
+package com.example.likelionstudy.answer;
 
 import java.time.LocalDateTime;
+
+import com.example.likelionstudy.question.Question;
 import lombok.Getter;
 import lombok.Setter;
 
