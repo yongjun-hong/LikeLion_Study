@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding: 2px 12px;
+    font-family: 'SUITE-Regular';
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    padding: 8px;
+}
+
+.logo i {
+    color: lightgreen;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    font-family: 'SUITE-Regular';
+    font-size: 20px;
+    align-items: center;
+}
+
+.menu li {
+    padding: 8px 50px;
+}
+
+.menu li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+.toogleBtn {
+
+    padding-right: 10px;
+    font-size: 24px;
+    color: white
+}
+
+div {
+    padding-top: 12px;
+    text-align: center;
+}
+
+
+@media screen and (max-width:760px) {
+    .navbar {
+        flex-direction: column;
+        /* align-items: flex-start; */
+        padding: 8px 24px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+}
