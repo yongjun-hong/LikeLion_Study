@@ -20,27 +20,47 @@ public class ArticleApiController {
     @Autowired
     private ArticleService articleService;
 
-    @GetMapping("/api/hello")
-    public String hello(){
-        return "hello world!";
-    }
-
+    //Get
+    @GetMapping("/api/articles")
     public List<Article> index() {
         return articleService.index();
 
     }
 
-    @GetMapping("/articles/{id}")
+    @GetMapping("/api/articles/{id}")
     public Article show(@PathVariable Long id) {
         return articleService.show(id);
     }
+    @GetMapping("/api/hello")
+    public String hello(){
+        return "hello world!";
+    }
+    //Post
+    @PostMapping("/api/articles")
+    public ResponseEntity<Article> create(@RequestBody ArticleForm dto) {
+        //스프링부트에서 @RequestBody는 HTTP 요청의 body 부분을 자바 객체로 변환하는데 사용되는 어노테이션입니다.
+        Article created = articleService.create(dto);
+        return (created != null) ?
+                ResponseEntity.status(HttpStatus.OK).body(created) :
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
 
-    @PostMapping("/articles")
-    public ResponseEntity<Article> create(@RequestParam ArticleForm articleForm){
-        Article article = articleService.create(articleForm);
+    // PATCH
+    @PatchMapping("/api/articles/{id}")
+    public ResponseEntity<Article> update(@PathVariable Long id,
+                                          @RequestBody ArticleForm dto) {
+        Article updated = articleService.update(id, dto);
+        return (updated != null) ?
+                ResponseEntity.status(HttpStatus.OK).body(updated) :
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
 
-        return (article != null) ?
-                ResponseEntity.status(HttpStatus.OK).body(article) :
+    // DELETE
+    @DeleteMapping("/api/articles/{id}")
+    public ResponseEntity<Article> delete(@PathVariable Long id) {
+        Article deleted = articleService.delete(id);
+        return (deleted != null) ?
+                ResponseEntity.status(HttpStatus.NO_CONTENT).build() :
                 ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
